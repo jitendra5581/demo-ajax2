@@ -1,0 +1,50 @@
+
+{% extends 'student/header.html' %}
+
+{% load static %}
+
+{% block titleblock %} Home page {% endblock %}
+
+
+{% block pagebody %}
+
+<img src="{% static '/images/books.jpg' %}">
+
+
+<h1>Names</h1>
+{% for x in names %}
+
+{% if x == 'Amit' %}
+<h1 style="color:red">
+  {{ x }}
+</h1>
+{% elif x == 'Rahul' %}
+<h1 style="color:green">
+  {{ x }}
+</h1>
+{% else %}
+<h1 style="color:blue">
+  {{ x }}
+</h1>
+
+
+{% endif %}
+
+
+{% endfor %}
+
+<hr>
+<h1>email ids</h1>
+{% for x in emails %}
+{% if x == 'Amit@gmail.com' %}
+<h1 style="color:red">
+  {{ x }}
+</h1>
+{% endif %}
+
+
+
+{% endfor %}
+
+
+{% endblock %}
